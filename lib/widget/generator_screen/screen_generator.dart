@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
 
-Scaffold screenGenerator({required Widget child}) => Scaffold(
+const double _maxHeigt = 0.85;
+
+Scaffold screenGenerator(BuildContext context, {required Widget child}) =>
+    Scaffold(
       appBar: AppBar(),
-      body: child,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height * _maxHeigt,
+            child: child,
+          ),
+        ),
+      ),
     );

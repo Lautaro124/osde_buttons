@@ -8,7 +8,7 @@ class RequesApi {
 
   String _url() => Url.base.value + route;
 
-  Future<Response> get() async {
+  Future<Response<dynamic>> get() async {
     Options options = Options(headers: {
       'Authorization':
           'Basic c29wb3J0ZXVzdWFyaW9zOkZFdWhSc2lPQThpU2doNWhXODVOQ3RYYw==',

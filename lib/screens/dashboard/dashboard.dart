@@ -11,7 +11,26 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  void breakingNews() async {}
+  @override
   Widget build(BuildContext context) {
-    return screenGenerator(child: Container());
+    return screenGenerator(
+      context,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          ElevatedButton(
+            onPressed: breakingNews,
+            child: const Text('news'),
+          ),
+          const SizedBox(width: 16),
+          const Text('Count: test'),
+        ],
+      ),
+    );
   }
 }

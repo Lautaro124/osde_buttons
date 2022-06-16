@@ -11,26 +11,19 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   @override
-  void initState() {
-    super.initState();
-  }
-
-  breakingNews() async {}
-  @override
   Widget build(BuildContext context) {
     return screenGenerator(
-      child: Row(
+      context,
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
+        children: [
+          const Text('Bienvenido'),
           ElevatedButton(
-            onPressed: breakingNews,
-            child: const Text('news'),
-          ),
-          const SizedBox(width: 16),
-          const Text('Count: test'),
+            onPressed: () {},
+            child: const Text('Osde'),
+          )
         ],
       ),
     );
-//    return screenGenerator(child: Container());
   }
 }

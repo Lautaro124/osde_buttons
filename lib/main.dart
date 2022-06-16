@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'assets/themes/theme_choise.dart';
+import 'screens/dashboard/dashboard.dart';
 import 'screens/login/login.dart';
 
 void main() {
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: 'Login',
       routes: {
         'Login': (BuildContext context) => const Login(),
+        'Dashboard': (BuildContext context) => const Dashboard()
       },
     );
   }
