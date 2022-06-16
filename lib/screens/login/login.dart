@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:osde_botonera/assets/enums/navigation_route.dart';
 
 import '../../widget/generator_screen/screen_generator.dart';
 
@@ -19,7 +20,9 @@ class _LoginState extends State<Login> {
         children: [
           const Text('Bienvenido'),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, NavigationRoute.dashboard.route);
+            },
             child: const Text('Osde'),
           )
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:osde_botonera/assets/enums/navigation_route.dart';
 
 import 'assets/themes/theme_choise.dart';
 import 'screens/dashboard/dashboard.dart';
@@ -20,8 +21,9 @@ class MyApp extends StatelessWidget {
       darkTheme: MyThemes.darkTheme(),
       initialRoute: 'Login',
       routes: {
-        'Login': (BuildContext context) => const Login(),
-        'Dashboard': (BuildContext context) => const Dashboard()
+        NavigationRoute.login.route: (BuildContext context) => const Login(),
+        NavigationRoute.dashboard.route: (BuildContext context) =>
+            const Dashboard()
       },
     );
   }
