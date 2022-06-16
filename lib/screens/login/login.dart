@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../widget/generator_screen/screen_generator.dart';
 
 class Login extends StatefulWidget {
@@ -17,16 +18,18 @@ class _LoginState extends State<Login> {
   breakingNews() async {}
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        ElevatedButton(
-          onPressed: breakingNews,
-          child: const Text('news'),
-        ),
-        const SizedBox(width: 16),
-        Text('Count: test'),
-      ],
+    return screenGenerator(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          ElevatedButton(
+            onPressed: breakingNews,
+            child: const Text('news'),
+          ),
+          const SizedBox(width: 16),
+          const Text('Count: test'),
+        ],
+      ),
     );
 //    return screenGenerator(child: Container());
   }
